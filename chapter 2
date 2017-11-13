@@ -1,0 +1,35 @@
+选择器
+
+h1 { color:red; backgroungd:yellow;} 分别对应：选择器 {属性:值; 属性:值;} 属性和值加起来是声明 ，中括号内的合起来叫声明块。
+
+选择器分组 ，声明分组 ， 结合选择器和声明的分组
+
+选择器的分类： 
+           类选择器：  p.warning {font-weight:bold;}
+           
+           id选择器:  p#lead-para {font-weight:bold;}   // id具有唯一性
+           
+           属性选择器:h1[class] {color:silver;}  , a[href][title] {font-weight:bold;} , p[class~="warning"] {font-weight:bold;}
+                     最后一个是根据部分属性值进行选择。
+                     
+           后代选择器：ul ol em {color:gray;} 根据子元素进行选择 ， h1+p {margin-top: 0 ;} 选择h1后出现的段落，根据相邻兄弟进行选择
+                     html > body table + ul {margin-top:1.5em;} 选择在一个table元素后出现的所有兄弟ul元素，该table元素包含在一个body元素中
+                     ，body元素本身是html元素的子元素。
+                     
+           伪类选择器： 链接伪类(静态伪类)：a:link , a:visited 动态伪类： :focus , :hover , :active  动态伪类可以应用到任何元素。
+                      上述除了":focus"的四个伪类若同时出现，最好按上述顺序出现，这个涉及到权重的问题，在下一章会解释。
+                      
+                      静态伪类： :first-child ,  p:first-child {font-weight:bold;} 这个伪类经常被误解， 这里意思是将作为某元素第一个子元素的
+                      所有p元素设置为粗体，而非将p元素的第一个子元素设置为粗体。
+                      
+                      结合伪类： a:link:hover {color:red;} 鼠标指针停留在已访问链接上时，链接变成红色。
+                      
+           伪元素选择器： :first-letter , first-line 都是伪元素
+                        p:first-letter {color:maroon;} 将每一段的第一个字母变成酒红色
+                        p:first-line {color:green;} 将每一段的第一行变成紫色
+                        伪元素能应用到的属性是有一定限制的，使用前应该查明
+                        
+                      
+                      
+           
+           
